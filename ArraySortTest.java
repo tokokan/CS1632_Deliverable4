@@ -8,8 +8,8 @@ import org.junit.BeforeClass;
 public class ArraySortTest {
 	
 	//needed global variables/constants for the test
-	int NUM_OF_ARRAYS = 300; //number of arrays tested
-	int MAX_SIZE = 1000; //maximum  size of an array
+	int NUM_OF_ARRAYS = 200; //number of arrays tested
+	int MAX_SIZE = 50000; //maximum  size of an array
 	Random rnd = new Random(); //random generator
 	int initArrays[][] = new int[NUM_OF_ARRAYS][]; //our starter arrays
 	int sortedArrays1[][] = new int[NUM_OF_ARRAYS][]; //our sorted arrays
@@ -37,7 +37,7 @@ public class ArraySortTest {
 		for (int i = 3; i < NUM_OF_ARRAYS; i++)
 		{
 			//randomize the size of the array
-			int length = rnd.nextInt(MAX_SIZE)+1;
+			int length = rnd.nextInt(MAX_SIZE);
 			//initialize the arrays
 			initArrays[i] = new int[length];
 			sortedArrays1[i] = new int[length];
